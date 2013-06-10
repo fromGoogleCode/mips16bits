@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sun Jun  9 16:04:50 2013
+Quartus II Version : 11.0 Build 157 04/27/2011 SJ Web Edition
+Revision Name : tp1
+Top-level Entity Name : tp1
+Family : Cyclone II
+Total logic elements : 1,539
+    Total combinational functions : 1,308
+    Dedicated logic registers : 377
+Total registers : 377
+Total pins : 80
+Total virtual pins : 0
+Total memory bits : 800
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

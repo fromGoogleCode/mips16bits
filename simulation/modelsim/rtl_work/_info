@@ -1,0 +1,212 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/junior/Desktop/maoi/teste/simulation/modelsim
+vALU
+I6TJ;Ikc]B7Y2ihZXm@?bV0
+VVIFaHDGa0:8Xc=jA3OZ[61
+w1370707149
+8/home/junior/Desktop/maoi/teste/ALU.v
+F/home/junior/Desktop/maoi/teste/ALU.v
+L0 15
+Z1 OV;L;6.5e;42
+r1
+31
+Z2 o-vlog01compat -work work -O0
+Z3 !s92 -vlog01compat -work work +incdir+/home/junior/Desktop/maoi/teste -O0
+n@a@l@u
+!s100 da[QKoKRGA8WeR0o:jeK<2
+!s85 0
+!s101 -O0
+vAluControl
+!s100 icZWAJA6z:H0T=K<VE:EU2
+IDXN?2f0;4DF42_j3VZOTm2
+Vi?R0`P1;I8ADdXkSa1HXM3
+w1370736336
+8/home/junior/Desktop/maoi/teste/AluControl.v
+F/home/junior/Desktop/maoi/teste/AluControl.v
+L0 1
+R1
+r1
+!s85 0
+31
+!s101 -O0
+R2
+R3
+n@alu@control
+vBanco
+I22oQX;EFJY6H1FX=Tbk:k2
+V04;QlV<aYk`]8flC=m7hI3
+w1370785801
+8/home/junior/Desktop/maoi/teste/Banco.v
+F/home/junior/Desktop/maoi/teste/Banco.v
+L0 3
+R1
+r1
+31
+R2
+R3
+n@banco
+!s100 ?_HUL^JbSHCF0U:5aWM3d1
+!s85 0
+!s101 -O0
+vControle
+IoHX[aL?1OdNPmjanaHnb41
+V4E3UVAPQ]RC;ll>ic4J:b1
+w1370732400
+8/home/junior/Desktop/maoi/teste/Controle.v
+F/home/junior/Desktop/maoi/teste/Controle.v
+L0 15
+R1
+r1
+31
+R2
+R3
+n@controle
+!s100 E?NESUz>:3cN0Oa?X@dJH1
+!s85 0
+!s101 -O0
+vDisplay
+ILo9bPidj?]=TSe5DSGl>72
+V6G<ch9OT1J2i@j6LTLf`E2
+w1354916858
+8/home/junior/Desktop/maoi/teste/Display.v
+F/home/junior/Desktop/maoi/teste/Display.v
+L0 15
+R1
+r1
+31
+R2
+R3
+n@display
+!s100 _21Cz[Wo@If:4S8=3f]`^1
+!s85 0
+!s101 -O0
+vMemoria
+IIG9k9JAUQ4B_3Bo5]8lXa1
+V999=dK;n@cScCm7k[K>F=2
+w1370787568
+8/home/junior/Desktop/maoi/teste/Memoria.v
+F/home/junior/Desktop/maoi/teste/Memoria.v
+L0 15
+R1
+r1
+31
+R2
+n@memoria
+R3
+!s100 <[9ADfF`cDRz^fhZWAJ<X1
+!s85 0
+!s101 -O0
+vmux_PC
+Ib2aWC4Y<d7JFRCAieBlY12
+VBiVb2S>IX3U?W`P1OX@W41
+w1370178124
+8/home/junior/Desktop/maoi/teste/mux_PC.v
+F/home/junior/Desktop/maoi/teste/mux_PC.v
+L0 1
+R1
+r1
+31
+R2
+R3
+nmux_@p@c
+!s100 z3cA9N67gM>h?nZZR3djO3
+!s85 0
+!s101 -O0
+vmuxA
+I3N3Be_<a45G61M?Xdz0Zj3
+VUKG4?@:UGgeHFkNSPB1fb1
+w1369595118
+8/home/junior/Desktop/maoi/teste/muxA.v
+F/home/junior/Desktop/maoi/teste/muxA.v
+L0 1
+R1
+r1
+31
+R2
+R3
+nmux@a
+!s100 D[0Cg]@=Td>d;;B0W;E9[0
+!s85 0
+!s101 -O0
+vmuxB
+IFRB1Y@hX;=TU=ldD4z2>J3
+VO[9aO0m>E=z[lnYn?XY^K2
+w1370737768
+8/home/junior/Desktop/maoi/teste/muxB.v
+F/home/junior/Desktop/maoi/teste/muxB.v
+L0 1
+R1
+r1
+31
+R2
+R3
+nmux@b
+!s100 9kJjc4>@A0k10C`ISiE9P0
+!s85 0
+!s101 -O0
+vmuxData
+I?gb4>Li7@zUa;X?Bfm:Me3
+Va8`]^@c<IL5E0^K8ohJeD2
+w1369659636
+8/home/junior/Desktop/maoi/teste/muxData.v
+F/home/junior/Desktop/maoi/teste/muxData.v
+L0 1
+R1
+r1
+31
+R2
+R3
+nmux@data
+!s100 ga9eJkWlgIfC3NZz90fZQ2
+!s85 0
+!s101 -O0
+vmuxPc2
+IjhN5U;d8e3l6km0Mo7OiF3
+V=mO[g:hLgUS2O7a<:G2fG2
+w1370108396
+8/home/junior/Desktop/maoi/teste/muxPc2.v
+F/home/junior/Desktop/maoi/teste/muxPc2.v
+L0 1
+R1
+r1
+31
+R2
+R3
+nmux@pc2
+!s100 eQWJ^o7Wf6Ai`V5W_UGF22
+!s85 0
+!s101 -O0
+vmuxReg
+I=cg1Gzoj@mcZl@9F`R6on3
+VZ6`iL;R5PUDEaJm9USi9g3
+w1369660618
+8/home/junior/Desktop/maoi/teste/muxReg.v
+F/home/junior/Desktop/maoi/teste/muxReg.v
+L0 1
+R1
+r1
+31
+R2
+R3
+nmux@reg
+!s100 J@VRLQSh<WZ86a4>fUX=E2
+!s85 0
+!s101 -O0
+vtp1
+IgocT6:iCHCKU7GWlfV]nY2
+VOgHkg3FCNXNn>KJ:HnN`R0
+w1370788195
+8/home/junior/Desktop/maoi/teste/tp1.v
+F/home/junior/Desktop/maoi/teste/tp1.v
+L0 3
+R1
+r1
+31
+R2
+R3
+!s100 V25Q;Y6HoJe7[z2]n`JW<1
+!s85 0
+!s101 -O0

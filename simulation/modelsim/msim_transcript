@@ -1,0 +1,388 @@
+# do tp1_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Modifying /home/junior/altera/11.0/modelsim_ase/linuxaloem/../modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+/home/junior/Desktop/maoi/teste {/home/junior/Desktop/maoi/teste/Memoria.v}
+# Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+# -- Compiling module Memoria
+# 
+# Top level modules:
+# 	Memoria
+# vlog -vlog01compat -work work +incdir+/home/junior/Desktop/maoi/teste {/home/junior/Desktop/maoi/teste/muxPc2.v}
+# Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+# -- Compiling module muxPc2
+# 
+# Top level modules:
+# 	muxPc2
+# vlog -vlog01compat -work work +incdir+/home/junior/Desktop/maoi/teste {/home/junior/Desktop/maoi/teste/muxA.v}
+# Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+# -- Compiling module muxA
+# 
+# Top level modules:
+# 	muxA
+# vlog -vlog01compat -work work +incdir+/home/junior/Desktop/maoi/teste {/home/junior/Desktop/maoi/teste/muxReg.v}
+# Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+# -- Compiling module muxReg
+# 
+# Top level modules:
+# 	muxReg
+# vlog -vlog01compat -work work +incdir+/home/junior/Desktop/maoi/teste {/home/junior/Desktop/maoi/teste/mux_PC.v}
+# Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+# -- Compiling module mux_PC
+# 
+# Top level modules:
+# 	mux_PC
+# vlog -vlog01compat -work work +incdir+/home/junior/Desktop/maoi/teste {/home/junior/Desktop/maoi/teste/ALU.v}
+# Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+# -- Compiling module ALU
+# ** Warning: /home/junior/Desktop/maoi/teste/ALU.v(60): [RDGN] - Redundant digits in numeric literal.
+# ** Warning: /home/junior/Desktop/maoi/teste/ALU.v(61): [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	ALU
+# vlog -vlog01compat -work work +incdir+/home/junior/Desktop/maoi/teste {/home/junior/Desktop/maoi/teste/Banco.v}
+# Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+# -- Compiling module Banco
+# 
+# Top level modules:
+# 	Banco
+# vlog -vlog01compat -work work +incdir+/home/junior/Desktop/maoi/teste {/home/junior/Desktop/maoi/teste/muxData.v}
+# Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+# -- Compiling module muxData
+# 
+# Top level modules:
+# 	muxData
+# vlog -vlog01compat -work work +incdir+/home/junior/Desktop/maoi/teste {/home/junior/Desktop/maoi/teste/Display.v}
+# Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+# -- Compiling module Display
+# 
+# Top level modules:
+# 	Display
+# vlog -vlog01compat -work work +incdir+/home/junior/Desktop/maoi/teste {/home/junior/Desktop/maoi/teste/Controle.v}
+# Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+# -- Compiling module Controle
+# 
+# Top level modules:
+# 	Controle
+# vlog -vlog01compat -work work +incdir+/home/junior/Desktop/maoi/teste {/home/junior/Desktop/maoi/teste/muxB.v}
+# Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+# -- Compiling module muxB
+# 
+# Top level modules:
+# 	muxB
+# vlog -vlog01compat -work work +incdir+/home/junior/Desktop/maoi/teste {/home/junior/Desktop/maoi/teste/tp1.v}
+# Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+# -- Compiling module tp1
+# 
+# Top level modules:
+# 	tp1
+# vlog -vlog01compat -work work +incdir+/home/junior/Desktop/maoi/teste {/home/junior/Desktop/maoi/teste/AluControl.v}
+# Model Technology ModelSim ALTERA vlog 6.5e Compiler 2010.02 Feb 27 2010
+# -- Compiling module AluControl
+# 
+# Top level modules:
+# 	AluControl
+# 
+vsim work.ALU work.AluControl work.Banco work.Controle work.Display work.Memoria work.mux_PC work.muxA work.muxB work.muxData work.muxPc2 work.muxReg work.tp1
+# vsim work.ALU work.AluControl work.Banco work.Controle work.Display work.Memoria work.mux_PC work.muxA work.muxB work.muxData work.muxPc2 work.muxReg work.tp1 
+# Loading work.ALU
+# Loading work.AluControl
+# Loading work.Banco
+# Loading work.Controle
+# Loading work.Display
+# Loading work.Memoria
+# Loading work.mux_PC
+# Loading work.muxA
+# Loading work.muxB
+# Loading work.muxData
+# Loading work.muxPc2
+# Loading work.muxReg
+# Loading work.tp1
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r0'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r1'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r2'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(245): [PCDPC] - Port size (4 or 4) does not match connection size (16) for port 'Immediate'.
+#         Region: /tp1/mxB
+vsim work.ALU work.AluControl work.Banco work.Controle work.Display work.Memoria work.mux_PC work.muxA work.muxB work.muxData work.muxPc2 work.muxReg work.tp1
+# vsim work.ALU work.AluControl work.Banco work.Controle work.Display work.Memoria work.mux_PC work.muxA work.muxB work.muxData work.muxPc2 work.muxReg work.tp1 
+# Loading work.ALU
+# Loading work.AluControl
+# Loading work.Banco
+# Loading work.Controle
+# Loading work.Display
+# Loading work.Memoria
+# Loading work.mux_PC
+# Loading work.muxA
+# Loading work.muxB
+# Loading work.muxData
+# Loading work.muxPc2
+# Loading work.muxReg
+# Loading work.tp1
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r0'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r1'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r2'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(245): [PCDPC] - Port size (4 or 4) does not match connection size (16) for port 'Immediate'.
+#         Region: /tp1/mxB
+vsim work.ALU work.AluControl work.Banco work.Controle work.Display work.Memoria work.mux_PC work.muxA work.muxB work.muxData work.muxPc2 work.muxReg work.tp1
+# vsim work.ALU work.AluControl work.Banco work.Controle work.Display work.Memoria work.mux_PC work.muxA work.muxB work.muxData work.muxPc2 work.muxReg work.tp1 
+# Loading work.ALU
+# Loading work.AluControl
+# Loading work.Banco
+# Loading work.Controle
+# Loading work.Display
+# Loading work.Memoria
+# Loading work.mux_PC
+# Loading work.muxA
+# Loading work.muxB
+# Loading work.muxData
+# Loading work.muxPc2
+# Loading work.muxReg
+# Loading work.tp1
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r0'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r1'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r2'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(245): [PCDPC] - Port size (4 or 4) does not match connection size (16) for port 'Immediate'.
+#         Region: /tp1/mxB
+vsim work.ALU work.AluControl work.Banco work.Controle work.Display work.Memoria work.mux_PC work.muxA work.muxB work.muxData work.muxPc2 work.muxReg work.tp1
+# vsim work.ALU work.AluControl work.Banco work.Controle work.Display work.Memoria work.mux_PC work.muxA work.muxB work.muxData work.muxPc2 work.muxReg work.tp1 
+# Loading work.ALU
+# Loading work.AluControl
+# Loading work.Banco
+# Loading work.Controle
+# Loading work.Display
+# Loading work.Memoria
+# Loading work.mux_PC
+# Loading work.muxA
+# Loading work.muxB
+# Loading work.muxData
+# Loading work.muxPc2
+# Loading work.muxReg
+# Loading work.tp1
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r0'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r1'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r2'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(245): [PCDPC] - Port size (4 or 4) does not match connection size (16) for port 'Immediate'.
+#         Region: /tp1/mxB
+vsim work.ALU work.AluControl work.Banco work.Controle work.Display work.Memoria work.mux_PC work.muxA work.muxB work.muxData work.muxPc2 work.muxReg work.tp1
+# vsim work.ALU work.AluControl work.Banco work.Controle work.Display work.Memoria work.mux_PC work.muxA work.muxB work.muxData work.muxPc2 work.muxReg work.tp1 
+# Loading work.ALU
+# Loading work.AluControl
+# Loading work.Banco
+# Loading work.Controle
+# Loading work.Display
+# Loading work.Memoria
+# Loading work.mux_PC
+# Loading work.muxA
+# Loading work.muxB
+# Loading work.muxData
+# Loading work.muxPc2
+# Loading work.muxReg
+# Loading work.tp1
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r0'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r1'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r2'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(245): [PCDPC] - Port size (4 or 4) does not match connection size (16) for port 'Immediate'.
+#         Region: /tp1/mxB
+vsim work.ALU work.AluControl work.Banco work.Controle work.Display work.Memoria work.mux_PC work.muxA work.muxB work.muxData work.muxPc2 work.muxReg work.tp1
+# vsim work.ALU work.AluControl work.Banco work.Controle work.Display work.Memoria work.mux_PC work.muxA work.muxB work.muxData work.muxPc2 work.muxReg work.tp1 
+# Loading work.ALU
+# Loading work.AluControl
+# Loading work.Banco
+# Loading work.Controle
+# Loading work.Display
+# Loading work.Memoria
+# Loading work.mux_PC
+# Loading work.muxA
+# Loading work.muxB
+# Loading work.muxData
+# Loading work.muxPc2
+# Loading work.muxReg
+# Loading work.tp1
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r0'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r1'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r2'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(245): [PCDPC] - Port size (4 or 4) does not match connection size (16) for port 'Immediate'.
+#         Region: /tp1/mxB
+vsim work.ALU work.AluControl work.Banco work.Controle work.Display work.Memoria work.mux_PC work.muxA work.muxB work.muxData work.muxPc2 work.muxReg work.tp1
+# vsim work.ALU work.AluControl work.Banco work.Controle work.Display work.Memoria work.mux_PC work.muxA work.muxB work.muxData work.muxPc2 work.muxReg work.tp1 
+# Loading work.ALU
+# Loading work.AluControl
+# Loading work.Banco
+# Loading work.Controle
+# Loading work.Display
+# Loading work.Memoria
+# Loading work.mux_PC
+# Loading work.muxA
+# Loading work.muxB
+# Loading work.muxData
+# Loading work.muxPc2
+# Loading work.muxReg
+# Loading work.tp1
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r0'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r1'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r2'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(245): [PCDPC] - Port size (4 or 4) does not match connection size (16) for port 'Immediate'.
+#         Region: /tp1/mxB
+vsim work.ALU work.AluControl work.Banco work.Controle work.Display work.Memoria work.mux_PC work.muxA work.muxB work.muxData work.muxPc2 work.muxReg work.tp1
+# vsim work.ALU work.AluControl work.Banco work.Controle work.Display work.Memoria work.mux_PC work.muxA work.muxB work.muxData work.muxPc2 work.muxReg work.tp1 
+# Loading work.ALU
+# Loading work.AluControl
+# Loading work.Banco
+# Loading work.Controle
+# Loading work.Display
+# Loading work.Memoria
+# Loading work.mux_PC
+# Loading work.muxA
+# Loading work.muxB
+# Loading work.muxData
+# Loading work.muxPc2
+# Loading work.muxReg
+# Loading work.tp1
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r0'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r1'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r2'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(245): [PCDPC] - Port size (4 or 4) does not match connection size (16) for port 'Immediate'.
+#         Region: /tp1/mxB
+vsim work.ALU work.AluControl work.Banco work.Controle work.Display work.Memoria work.mux_PC work.muxA work.muxB work.muxData work.muxPc2 work.muxReg work.tp1
+# vsim work.ALU work.AluControl work.Banco work.Controle work.Display work.Memoria work.mux_PC work.muxA work.muxB work.muxData work.muxPc2 work.muxReg work.tp1 
+# Loading work.ALU
+# Loading work.AluControl
+# Loading work.Banco
+# Loading work.Controle
+# Loading work.Display
+# Loading work.Memoria
+# Loading work.mux_PC
+# Loading work.muxA
+# Loading work.muxB
+# Loading work.muxData
+# Loading work.muxPc2
+# Loading work.muxReg
+# Loading work.tp1
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r0'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r1'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r2'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(245): [PCDPC] - Port size (4 or 4) does not match connection size (16) for port 'Immediate'.
+#         Region: /tp1/mxB
+vsim work.ALU work.AluControl work.Banco work.Controle work.Display work.Memoria work.mux_PC work.muxA work.muxB work.muxData work.muxPc2 work.muxReg work.tp1
+# vsim work.ALU work.AluControl work.Banco work.Controle work.Display work.Memoria work.mux_PC work.muxA work.muxB work.muxData work.muxPc2 work.muxReg work.tp1 
+# Loading work.ALU
+# Loading work.AluControl
+# Loading work.Banco
+# Loading work.Controle
+# Loading work.Display
+# Loading work.Memoria
+# Loading work.mux_PC
+# Loading work.muxA
+# Loading work.muxB
+# Loading work.muxData
+# Loading work.muxPc2
+# Loading work.muxReg
+# Loading work.tp1
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r0'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r1'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r2'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(245): [PCDPC] - Port size (4 or 4) does not match connection size (16) for port 'Immediate'.
+#         Region: /tp1/mxB
+vsim work.ALU work.AluControl work.Banco work.Controle work.Display work.Memoria work.mux_PC work.muxA work.muxB work.muxData work.muxPc2 work.muxReg work.tp1
+# vsim work.ALU work.AluControl work.Banco work.Controle work.Display work.Memoria work.mux_PC work.muxA work.muxB work.muxData work.muxPc2 work.muxReg work.tp1 
+# Loading work.ALU
+# Loading work.AluControl
+# Loading work.Banco
+# Loading work.Controle
+# Loading work.Display
+# Loading work.Memoria
+# Loading work.mux_PC
+# Loading work.muxA
+# Loading work.muxB
+# Loading work.muxData
+# Loading work.muxPc2
+# Loading work.muxReg
+# Loading work.tp1
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r0'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r1'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r2'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(245): [PCDPC] - Port size (4 or 4) does not match connection size (16) for port 'Immediate'.
+#         Region: /tp1/mxB
+vsim work.ALU work.AluControl work.Banco work.Controle work.Display work.Memoria work.mux_PC work.muxA work.muxB work.muxData work.muxPc2 work.muxReg work.tp1
+# vsim work.ALU work.AluControl work.Banco work.Controle work.Display work.Memoria work.mux_PC work.muxA work.muxB work.muxData work.muxPc2 work.muxReg work.tp1 
+# Loading work.ALU
+# Loading work.AluControl
+# Loading work.Banco
+# Loading work.Controle
+# Loading work.Display
+# Loading work.Memoria
+# Loading work.mux_PC
+# Loading work.muxA
+# Loading work.muxB
+# Loading work.muxData
+# Loading work.muxPc2
+# Loading work.muxReg
+# Loading work.tp1
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r0'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r1'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r2'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(245): [PCDPC] - Port size (4 or 4) does not match connection size (16) for port 'Immediate'.
+#         Region: /tp1/mxB
+vsim work.ALU work.AluControl work.Banco work.Controle work.Display work.Memoria work.mux_PC work.muxA work.muxB work.muxData work.muxPc2 work.muxReg work.tp1
+# vsim work.ALU work.AluControl work.Banco work.Controle work.Display work.Memoria work.mux_PC work.muxA work.muxB work.muxData work.muxPc2 work.muxReg work.tp1 
+# Loading work.ALU
+# Loading work.AluControl
+# Loading work.Banco
+# Loading work.Controle
+# Loading work.Display
+# Loading work.Memoria
+# Loading work.mux_PC
+# Loading work.muxA
+# Loading work.muxB
+# Loading work.muxData
+# Loading work.muxPc2
+# Loading work.muxReg
+# Loading work.tp1
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r0'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r1'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(237): [PCDPC] - Port size (16 or 16) does not match connection size (1) for port 'r2'.
+#         Region: /tp1/bnc
+# ** Warning: (vsim-3015) /home/junior/Desktop/maoi/teste/tp1.v(245): [PCDPC] - Port size (4 or 4) does not match connection size (16) for port 'Immediate'.
+#         Region: /tp1/mxB
