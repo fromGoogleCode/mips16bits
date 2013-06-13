@@ -5,6 +5,7 @@
   
   Trabalho Prtico 05 - Novembro de 2012
   Arquivo: Memoria.v
+tESTE
   
   Alunos:	Cludio da Cunha Menezes Jnior
 				Daniel Carlos Hovadick Flix
