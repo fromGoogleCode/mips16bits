@@ -48,7 +48,7 @@ module Controle (opcode, prevState, clock, control, nextState);
 		ROM[10]= 16'b0000000010000000;
 		ROM[11]= 16'b0000000000000101;//colokei
 		ROM[12]= 16'b1000000000000000;//para dar tempo para o jump
-		ROM[13]= 16'b0100000000000000;
+		ROM[13]= 16'b0110000000000000;
 	end
 	
 	/* Realiza a transio de estados na subida de clock. */

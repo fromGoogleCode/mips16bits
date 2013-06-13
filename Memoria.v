@@ -1,11 +1,10 @@
 /*
-nsahjfsdakjsda  UNIVERSIDADE FEDERAL DE MINAS GERAIS
+  UNIVERSIDADE FEDERAL DE MINAS GERAIS
   DEPARTAMENTO DE CINCIA DA COMPUTAO
   ORGANIZAO DE COMPUTADORES I
-teste  
+  
   Trabalho Prtico 05 - Novembro de 2012
   Arquivo: Memoria.v
-tESTE
   
   Alunos:	Cludio da Cunha Menezes Jnior
 				Daniel Carlos Hovadick Flix
@@ -34,34 +33,6 @@ module Memoria (addrMem, readMem, dataIR, dataMDR, writeMem, data, CHAVE, VALOR,
 	
 	/* Inicializa a memria com valores prdefinidos. */
 	initial begin
-		/*memory[0] = 16'h6020; //reg[f] = mem[f+6]
-		memory[1] = 16'h9016;
-		memory[2] = 16'hC004;
-      //memory[2] = 16'hB004;
-      //memory[2] = 16'hA001;//jump pro 3
-		memory[3] = 16'h9016;
-		//memory[3] = 16'hC213; // mem[1+3] = reg[2]
-		memory[4] = 16'hC011;
-		//memory[4] = 16'h1011;
-		//memory[3] = 16'hCF0F;
-		memory[5] = 16'h9116;//mem[f+7] = reg[1]
-		memory[6] = 16'hCF8F;
-		memory[7] = 16'h0B46;
-		memory[8] = 16'h11AA;
-		memory[9] = 16'h4481;
-		memory[10]= 16'h6163;
-		memory[11]= 16'h75E8;
-		memory[12]= 16'h04CC;
-		memory[13]= 16'h1C61;
-		memory[14]= 16'h2C6A;
-		memory[15]= 16'h6A1F;
-		memory[16]= 16'h3B9F;
-		memory[17]= 16'h7205;
-		memory[18]= 16'h368A;
-		memory[19]= 16'h363C;
-		//memory[20]= 16'h2F83;
-		memory[20]= 16'h0001;
-		memory[21]= 16'h0C39;*/
 		memory[0]  = 16'b0010000000010000;
 		memory[1]  = 16'b0010000101100001;
 		memory[2]  = 16'b0110000000010000;

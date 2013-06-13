@@ -116,10 +116,10 @@ module tp1 (CLOCK_50, KEY, SW, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, LCD_DATA, LCD
 	
 	always@(posedge clock) state = nextState; 
 	/*always@(posedge clock) begin
-		if (KEY[0] == 0)begin
-			state = 0;
+		if (KEY[0] == 1)begin
+			state = nextState;
 		end
-		else state = nextState;
+		else state = 0;
 	end*/
 	
 	 always@(ctlSignal) begin
@@ -141,7 +141,7 @@ module tp1 (CLOCK_50, KEY, SW, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, LCD_DATA, LCD
 	end
 	
 	wire [5:0] wirePC;
-	reg [5:0] aux;
+	//reg [5:0] aux;
 
 	always@(negedge EscrevePC) begin
 	  if(state == 4'b0001)
@@ -150,7 +150,7 @@ module tp1 (CLOCK_50, KEY, SW, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, LCD_DATA, LCD
 	   PC <= selectedPC;
 	  if(state == 4'b1101 && zero == 1'b1)
 		PC <= selectedPC;
-	  //if (KEY[0] == 0) PC <= 0;
+	  //if (state == 4'b1010) PC <= 0;
    end
 		
 	assign wirePC = PC;
@@ -163,7 +163,7 @@ module tp1 (CLOCK_50, KEY, SW, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, LCD_DATA, LCD
 	wire [5:0] CHAVE;
 	wire [15:0]VALOR;
 	wire [15:0]VALORb;
-	//assign CHAVEm = SW[6:0];
+	//assign CHAVEm = SW[5:0];
 	assign CHAVE = SW[5:0];
 	
 	Memoria mem(addrMem,LeMem,dataIR,dataMDR,EscreveMem,store,CHAVEm,VALOR,state);
@@ -172,23 +172,20 @@ module tp1 (CLOCK_50, KEY, SW, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, LCD_DATA, LCD
 	/*Display digit_0(HEX0,{VALOR[3],VALOR[2],VALOR[1],VALOR[0]});
 	Display digit_1(HEX1,{VALOR[7],VALOR[6],VALOR[5],VALOR[4]});
 	Display digit_2(HEX2,{VALOR[11],VALOR[10],VALOR[9],VALOR[8]});
-	Display digit_3(HEX3,{VALOR[15],VALOR[14],VALOR[13],VALOR[12]});*/
-	
+	Display digit_3(HEX3,{VALOR[15],VALOR[14],VALOR[13],VALOR[12]});
+	*/
 	/* Envia o valor da posicao selecionada para os displays. */
-	Display digit_0(HEX0,{VALORb[3],VALORb[2],VALORb[1],VALORb[0]});
+	/*Display digit_0(HEX0,{VALORb[3],VALORb[2],VALORb[1],VALORb[0]});
 	Display digit_1(HEX1,{VALORb[7],VALORb[6],VALORb[5],VALORb[4]});
 	Display digit_2(HEX2,{VALORb[11],VALORb[10],VALORb[9],VALORb[8]});
 	Display digit_3(HEX3,{VALORb[15],VALORb[14],VALORb[13],VALORb[12]});
-	//436F
-	//7265
-	//7421
+	*/
 
-	
 	/*Verificando Status*/
-	Display st(HEX4,{state[3],state[2],state[1],state[0]});
+	//Display st(HEX4,{state[3],state[2],state[1],state[0]});
 	
 	/*Verificando pc*/
-	Display pc(HEX5,{PC[3],PC[2],PC[1],PC[0]});
+	//Display pc(HEX5,{PC[3],PC[2],PC[1],PC[0]});
 	
   reg [3:0] regADDRA;
   reg [3:0] regADDRB;
@@ -213,8 +210,8 @@ module tp1 (CLOCK_50, KEY, SW, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, LCD_DATA, LCD
       regADDRB = dataIR[7:4];
       regADDRC = dataIR[3:0];
 		immediate = {{12{1'b0}},dataIR[7:4]};
-		if (IR[3] == 1'b0) bnch = PC + {{3{1'b0}},dataIR[3:0]};
-		else bnch = PC - {{2{1'b0}},dataIR[3:0]};
+		if (dataIR[3] == 1'b0) bnch = PC + {{2{1'b0}},IR[3:0]};
+		else if(dataIR[3] == 1'b1)bnch = PC - {{2{1'b0}},IR[3:0]};
 		regjump = {{3{1'b0}},dataIR[11:0]};
 	 end
   end
@@ -229,9 +226,9 @@ module tp1 (CLOCK_50, KEY, SW, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, LCD_DATA, LCD
   muxReg mxRG(clock,addrb,auxc,RegDst,addrc);
   muxData mxDT(clock, auxMDR,dataALU2,MemparaReg,datac);
   
-  wire wire_r3;
-  wire wire_r4;
-  wire wire_r5;
+  wire [15:0]wire_r0;
+  wire [15:0]wire_r1;
+  wire [15:0]wire_r2;
   
   Banco bnc(clock,state, EscreveReg,addra,addrb,addrc,dataa,datab,datac, store, CHAVE, VALORb, wire_r0, wire_r1, wire_r2, KEY[1]);
   
@@ -259,20 +256,27 @@ module tp1 (CLOCK_50, KEY, SW, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, LCD_DATA, LCD
   
   reg startLCD;
   wire wire_startLCD;
-  /*
+  
   always@(state) begin
 		if (state == 4'b1010)begin
 			startLCD = 1'b1;
 		end
 		else startLCD = 1'b0;
 	end
- */ 
-  //assign wire_startLCD = 1'b1;
+ 
+ 
+  wire [15:0]wire_r3;
+  wire [15:0]wire_r4;
+  wire [15:0]wire_r5;
   
-  assign wire_r3 = 16'h436F;
-  assign wire_r4 = 16'h7265;
-  assign wire_r5 = 16'h7421;
+  assign wire_startLCD = 1'b1;
   
-  LCD display_LCD(CLOCK_50, LCD_DATA, LCD_RW, LCD_EN, LCD_RS, LCD_ON, LCD_BLON, wire_r3, wire_r4, wire_r5, wire_startLCD);
+  assign wire_r3 = 15'h436F;
+  assign wire_r4 = 15'h7265;
+  assign wire_r5 = 15'h7421;
+  
+  LCD LCD(CLOCK_50, LCD_DATA, LCD_RW, LCD_EN, LCD_RS, LCD_ON, LCD_BLON, wire_r0, wire_r1, wire_r2, wire_startLCD);
+  
+ //LCD display_LCD(CLOCK_50, LCD_DATA, LCD_RW, LCD_EN, LCD_RS, LCD_ON, LCD_BLON, wire_r3, wire_r4, wire_r5, wire_startLCD);
   
 endmodule

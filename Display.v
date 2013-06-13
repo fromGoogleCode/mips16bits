@@ -10,7 +10,6 @@
 				Daniel Carlos Hovadick Félix
 				Guilherme Gonzaga Barbosa
 				Marconi Chaves dos Santos
-				fdassdfasd
 */
 
 module Display (out, in);
