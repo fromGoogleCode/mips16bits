@@ -1,28 +1,15 @@
-/*
-  UNIVERSIDADE FEDERAL DE MINAS GERAIS
-  DEPARTAMENTO DE CIENCIA DA COMPUTACAO
-  ORGANIZACAO DE COMPUTADORES I
-  
-  Trabalho Prático 02 - Novembro de 2012
-  Arquivo: Display.v
-  
-  Alunos:	Cláudio da Cunha Menezes Júnior
-				Daniel Carlos Hovadick Félix
-				Guilherme Gonzaga Barbosa
-				Marconi Chaves dos Santos
-*/
 
 module Display (out, in);
-	/* Entradas do módulo. */
+	/* Entradas do mdulo. */
 	input [3:0] in;
 	
-	/* Saídas do módulo. */
+	/* Sadas do mdulo. */
 	output [6:0] out;
 	
 	/* Componentes internos. */
-	reg [6:0] seg; // Número decodificado para o display.
+	reg [6:0] seg; // Nmero decodificado para o display.
 	
-	/* Decodifica o dígito de entrada. */
+	/* Decodifica o dgito de entrada. */
 	always @ (in) begin
 		case (in)
 			4'b0000: seg = 7'b1000000;
@@ -44,7 +31,7 @@ module Display (out, in);
 		endcase
 	end
 	
-	/* Envia o valor decodificado para a saída. */
+	/* Envia o valor decodificado para a sada. */
 	assign out = seg;
 
 endmodule

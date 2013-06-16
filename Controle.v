@@ -1,17 +1,3 @@
-/*
-  UNIVERSIDADE FEDERAL DE MINAS GERAIS
-  DEPARTAMENTO DE CIENCIA DA COMPUTACAO
-  ORGANIZACAO DE COMPUTADORES I
-  
-  Trabalho Prtico 04 - Novembro de 2012
-  Arquivo: Controle.v
-  
-  Alunos:	Cludio da Cunha Menezes Jnior
-				Daniel Carlos Hovadick Flix
-				Guilherme Gonzaga Barbosa
-				Marconi Chaves dos Santos
-*/
-
 module Controle (opcode, prevState, clock, control, nextState);
 	/* Entradas do mdulo. */
 	input [3:0] opcode;

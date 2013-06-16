@@ -164,7 +164,7 @@ module tp1 (CLOCK_50, KEY, SW, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, LCD_DATA, LCD
 	wire [15:0]VALOR;
 	wire [15:0]VALORb;
 	//assign CHAVEm = SW[5:0];
-	assign CHAVE = SW[5:0];
+	//assign CHAVE = SW[5:0];
 	
 	Memoria mem(addrMem,LeMem,dataIR,dataMDR,EscreveMem,store,CHAVEm,VALOR,state);
 	
@@ -182,10 +182,10 @@ module tp1 (CLOCK_50, KEY, SW, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, LCD_DATA, LCD
 	*/
 
 	/*Verificando Status*/
-	//Display st(HEX4,{state[3],state[2],state[1],state[0]});
+	Display st(HEX4,{state[3],state[2],state[1],state[0]});
 	
 	/*Verificando pc*/
-	//Display pc(HEX5,{PC[3],PC[2],PC[1],PC[0]});
+	Display pc(HEX5,{PC[3],PC[2],PC[1],PC[0]});
 	
   reg [3:0] regADDRA;
   reg [3:0] regADDRB;
@@ -197,23 +197,25 @@ module tp1 (CLOCK_50, KEY, SW, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, LCD_DATA, LCD
   always@(dataIR or dataMDR) begin
     MDR = dataMDR;
     if (EscreveIR == 1) begin
-        IR = dataIR;
+        IR <= dataIR;
     end
-    if((IR[15:12] == 4'b1000  || IR[15:12] == 4'b1001)&& state == 4'b0001)begin
-      regADDRA = dataIR[7:4];  
-      regADDRB = dataIR[3:0];
-      regADDRC = dataIR[11:8];
-		endereco = {{8{dataIR[7]}},dataIR[7:0]};
-    end
-    else if(state == 4'b0001 && IR[15:12] != 4'b1001 && IR[15:12] != 4'b1001)begin
-      regADDRA = dataIR[11:8];  
-      regADDRB = dataIR[7:4];
-      regADDRC = dataIR[3:0];
-		immediate = {{12{1'b0}},dataIR[7:4]};
-		if (dataIR[3] == 1'b0) bnch = PC + {{2{1'b0}},IR[3:0]};
-		else if(dataIR[3] == 1'b1)bnch = PC - {{2{1'b0}},IR[3:0]};
-		regjump = {{3{1'b0}},dataIR[11:0]};
-	 end
+	 if(state == 4'b0001)begin
+			if (IR[15:12] == 4'b1000  || IR[15:12] == 4'b1001) begin
+				regADDRA = dataIR[7:4];  
+				regADDRB = dataIR[3:0];
+				regADDRC = dataIR[11:8];
+				endereco = {{8{IR[7]}},IR[7:0]};
+			end
+			else begin
+				regADDRA = dataIR[11:8];  
+				regADDRB = dataIR[7:4];
+				regADDRC = dataIR[3:0];
+				immediate = {{12{1'b0}},dataIR[7:4]};
+				if (dataIR[3] == 1'b0) bnch = PC + {{2{1'b0}},IR[3:0]};
+				else if(dataIR[3] == 1'b1)bnch = PC - {{2{1'b0}},IR[3:0]};
+				regjump = {{3{1'b0}},dataIR[11:0]};
+			end
+		end
   end
   
   assign addra = regADDRA;
@@ -257,7 +259,7 @@ module tp1 (CLOCK_50, KEY, SW, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, LCD_DATA, LCD
   reg startLCD;
   wire wire_startLCD;
   
-  always@(state) begin
+  always@(negedge clock) begin
 		if (state == 4'b1010)begin
 			startLCD = 1'b1;
 		end
@@ -265,18 +267,8 @@ module tp1 (CLOCK_50, KEY, SW, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, LCD_DATA, LCD
 	end
  
  
-  wire [15:0]wire_r3;
-  wire [15:0]wire_r4;
-  wire [15:0]wire_r5;
-  
-  assign wire_startLCD = 1'b1;
-  
-  assign wire_r3 = 15'h436F;
-  assign wire_r4 = 15'h7265;
-  assign wire_r5 = 15'h7421;
+  assign wire_startLCD = startLCD; 
   
   LCD LCD(CLOCK_50, LCD_DATA, LCD_RW, LCD_EN, LCD_RS, LCD_ON, LCD_BLON, wire_r0, wire_r1, wire_r2, wire_startLCD);
-  
- //LCD display_LCD(CLOCK_50, LCD_DATA, LCD_RW, LCD_EN, LCD_RS, LCD_ON, LCD_BLON, wire_r3, wire_r4, wire_r5, wire_startLCD);
   
 endmodule

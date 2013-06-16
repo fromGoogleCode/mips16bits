@@ -1,17 +1,3 @@
-/*
-a
-  UNIVERSIDADE FEDERAL DE MINAS GERAIS
-  DEPARTAMENTO DE CIENCIA DA COMPUTACAO
-  ORGANIZACAO DE COMPUTADORES I
-  
-  Trabalho Prtico 03 - Novembro de 2012
-  Arquivo: ALU.v
-  
-  Alunos:	Cludio da Cunha Menezes Jnior
-				Daniel Carlos Hovadick Flix
-				Guilherme Gonzaga Barbosa
-				Marconi Chaves dos Santos
-*/
 
 module ALU (clock, A, B, opcode, ALUout, OverflowDetected, zero);
 	/* Entradas do modulo. */

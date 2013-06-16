@@ -32,6 +32,7 @@ module Banco (clock, state, writeReg, addra, addrb, addrc, dataa, datab, datac, 
 	
 	/* Inicializa o banco com valores predefinidos. */
 	initial begin
+	
 		Registradores[0] = 16'h0000;
 		Registradores[1] = 16'h0000;
 		Registradores[2] = 16'h0000;
@@ -48,6 +49,7 @@ module Banco (clock, state, writeReg, addra, addrb, addrc, dataa, datab, datac, 
 		Registradores[13]= 16'h0000;
 		Registradores[14]= 16'h0000;
 		Registradores[15]= 16'h0000;
+		
 	end
 	/* Leitura ou escrita no banco. */
 	always@(posedge clock) begin

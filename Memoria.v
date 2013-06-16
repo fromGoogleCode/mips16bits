@@ -1,16 +1,3 @@
-/*
-  UNIVERSIDADE FEDERAL DE MINAS GERAIS
-  DEPARTAMENTO DE CINCIA DA COMPUTAO
-  ORGANIZAO DE COMPUTADORES I
-  
-  Trabalho Prtico 05 - Novembro de 2012
-  Arquivo: Memoria.v
-  
-  Alunos:	Cludio da Cunha Menezes Jnior
-				Daniel Carlos Hovadick Flix
-				Guilherme Gonzaga Barbosa
-				Marconi Chaves dos Santos
-*/
 
 module Memoria (addrMem, readMem, dataIR, dataMDR, writeMem, data, CHAVE, VALOR, state);
 	/* Entradas do mdulo. */
@@ -33,6 +20,7 @@ module Memoria (addrMem, readMem, dataIR, dataMDR, writeMem, data, CHAVE, VALOR,
 	
 	/* Inicializa a memria com valores prdefinidos. */
 	initial begin
+	
 		memory[0]  = 16'b0010000000010000;
 		memory[1]  = 16'b0010000101100001;
 		memory[2]  = 16'b0110000000010000;
