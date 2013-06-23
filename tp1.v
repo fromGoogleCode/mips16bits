@@ -175,11 +175,11 @@ module tp1 (CLOCK_50, KEY, SW, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, LCD_DATA, LCD
 	Display digit_3(HEX3,{VALOR[15],VALOR[14],VALOR[13],VALOR[12]});
 	*/
 	/* Envia o valor da posicao selecionada para os displays. */
-	/*Display digit_0(HEX0,{VALORb[3],VALORb[2],VALORb[1],VALORb[0]});
+	Display digit_0(HEX0,{VALORb[3],VALORb[2],VALORb[1],VALORb[0]});
 	Display digit_1(HEX1,{VALORb[7],VALORb[6],VALORb[5],VALORb[4]});
 	Display digit_2(HEX2,{VALORb[11],VALORb[10],VALORb[9],VALORb[8]});
 	Display digit_3(HEX3,{VALORb[15],VALORb[14],VALORb[13],VALORb[12]});
-	*/
+	
 
 	/*Verificando Status*/
 	Display st(HEX4,{state[3],state[2],state[1],state[0]});
@@ -259,7 +259,7 @@ module tp1 (CLOCK_50, KEY, SW, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, LCD_DATA, LCD
   reg startLCD;
   wire wire_startLCD;
   
-  always@(negedge clock) begin
+	always@(state) begin
 		if (state == 4'b1010)begin
 			startLCD = 1'b1;
 		end
