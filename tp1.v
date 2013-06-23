@@ -164,7 +164,7 @@ module tp1 (CLOCK_50, KEY, SW, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, LCD_DATA, LCD
 	wire [15:0]VALOR;
 	wire [15:0]VALORb;
 	//assign CHAVEm = SW[5:0];
-	//assign CHAVE = SW[5:0];
+	assign CHAVE = SW[5:0];
 	
 	Memoria mem(addrMem,LeMem,dataIR,dataMDR,EscreveMem,store,CHAVEm,VALOR,state);
 	
