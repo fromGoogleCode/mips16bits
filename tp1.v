@@ -114,13 +114,10 @@ module tp1 (CLOCK_50, KEY, SW, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, LCD_DATA, LCD
 	/* Ativa o Controle.*/
 	Controle ctl(opcSignal,prevState,clock,ctlSignal,nextState);
 	
-	always@(posedge clock) state = nextState; 
-	/*always@(posedge clock) begin
-		if (KEY[0] == 1)begin
-			state = nextState;
-		end
-		else state = 0;
-	end*/
+	//always@(posedge clock) state = nextState; 
+	always@(posedge clock) begin
+		state = !KEY[0] ? 4'd0 : nextState;
+	end
 	
 	 always@(ctlSignal) begin
 	  if(ctlSignal != 0) begin
@@ -141,7 +138,6 @@ module tp1 (CLOCK_50, KEY, SW, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, LCD_DATA, LCD
 	end
 	
 	wire [5:0] wirePC;
-	//reg [5:0] aux;
 
 	always@(negedge EscrevePC) begin
 	  if(state == 4'b0001)
@@ -150,10 +146,11 @@ module tp1 (CLOCK_50, KEY, SW, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, LCD_DATA, LCD
 	   PC <= selectedPC;
 	  if(state == 4'b1101 && zero == 1'b1)
 		PC <= selectedPC;
-	  //if (state == 4'b1010) PC <= 0;
    end
-		
-	assign wirePC = PC;
+	
+	reg zeroPC = 16'd0;
+	assign wirePC = !KEY[0] ? zeroPC : PC;  
+	//assign wirePC = PC;
      
    mux_PC mxPC(clock, wirePC,dataALU1,addrMem,IouD);
 	wire [15:0] store;
